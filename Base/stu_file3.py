@@ -17,22 +17,24 @@ comments:python学习-序列类型的数据总结
 [起始位置:终止位置]:左闭右开
 """
 
-# s = "python"
-# li = ["aaa", "bbb", "ccc"]
-# tu = (123, "222", "999")
-#
-# # 下标取值：通过下标获取数据内的元素
-# # 从前往后数下标:从0开始
-# print(s[3])
-# print(li[1])
-# print(tu[2])
-# # 从后往前数下标:从-1开始
-# print(s[-3])
-# print(li[-2])
-# print(tu[-1])
+s = "python"
+li = ["aaa", "bbb", "ccc"]
+tu = (123, "222", "999")
+
+# 下标取值：通过下标获取数据内的元素
+# 从前往后数下标:从0开始
+print(s[3])
+print(li[1])
+print(tu[2])
+# 从后往前数下标:从-1开始
+print(s[-3])
+print(li[-2])
+print(tu[-1])
 
 # 切片操作：获取数据中的某一段数据
 li = [11, 22, 33, 44, 55, 66, 77, 88]
 res = li[0:4]
 print(res)
 print(li[2:5])
+
+print("git更新内容测试")
