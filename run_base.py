@@ -11,8 +11,14 @@ from Base import stu_file3
 from Base import stu_file4
 from Base import stu_file5
 
-stu_file1.stu1()
-stu_file2.stu2()
-stu_file3.stu3()
-stu_file4.stu4()
-stu_file5.stu5()
+
+def run():
+    stu_file1.stu1()
+    stu_file2.stu2()
+    stu_file3.stu3()
+    stu_file4.stu4()
+    stu_file5.stu5()
+
+
+if __name__ == '__main__':
+    run()
