@@ -5,20 +5,22 @@ Time:2020/9/30  23:55
 comments:python学习
 ==========================================
 """
-from Base import stu_file1
-from Base import stu_file2
-from Base import stu_file3
-from Base import stu_file4
-from Base import stu_file5
+import unittest
+from library.HTMLTestRunnerNew import HTMLTestRunner
+from common.handle_path import REPORT_FILENAME,CASE_DIR
 
 
-def run():
-    stu_file1.stu1()
-    stu_file2.stu2()
-    stu_file3.stu3()
-    stu_file4.stu4()
-    stu_file5.stu5()
+# 创建测试套件
+suite = unittest.TestSuite()
 
+# 加载用例到套件
+loader = unittest.TestLoader()
+# 执行所有测试用例类
+suite.addTest(loader.discover(CASE_DIR))
 
-if __name__ == '__main__':
-    run()
+runner = HTMLTestRunner(stream=open(REPORT_FILENAME, "wb"),
+                        title="测试报告",
+                        tester="bohe",
+                        description="Jenkins测试"
+                        )
+runner.run(suite)
